@@ -1,6 +1,6 @@
 /* Footer design */
 .footer {
-  background-color: #464646;
+  background-color: $gray-dark;
   padding: 20px 0;
   color: white;
   font-size: 10px;
@@ -13,5 +13,5 @@
 }
 
 .footer i:hover {
-  color: #BADEB2;
+  color: $green-lighter;
 }
