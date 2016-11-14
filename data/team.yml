@@ -1,0 +1,9 @@
+antoine:
+  picture: antoine.png
+  role: CEO
+bill:
+  picture: "http://www.fillmurray.com/200/200"
+  role: CTO
+nicolas:
+  picture: "http://www.placecage.com/350/350"
+  role: COO
