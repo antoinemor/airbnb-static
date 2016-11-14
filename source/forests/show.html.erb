@@ -1,0 +1,75 @@
+---
+title: A forest
+---
+<!-- Read from data.forests with owner's name as key -->
+<% forest = data.forests[owner] %>
+
+<!-- Inject forest data in template -->
+<div class="image-header text-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path forest.picture %>'">
+  <h1><%= forest.name %> with <%= owner.capitalize %></h1>
+</div>
+<div class="white-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        <div class="user_forest">
+          <div class="user_info text-center">
+            <%= image_tag forest.owner_picture, class: "avatar-med" %>
+            <h5><%= forest.owner_name %></h5>
+          </div>
+          <div class="forest_short_info">
+            <h4><%= forest.summary %></h4>
+            <h5><%= forest.name %></h5>
+            <% forest.rating.times do |val| %>
+              <i class="fa fa-star" style="color: #ffb400"></i>
+            <% end %>
+            <% (5 - forest.rating).times do |val| %>
+              <i class="fa fa-star" style="color: gray"></i>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 col-md-offset-1">
+        <div class="booking-form">
+          <form action="#">
+            <h4 class="text-center">Book this forest</h4>
+            <div class="form-group">
+              <div class="row">
+                <div class="col-xs-6">
+                  <input type="text" class="form-control" placeholder="checkin" id="checkin">
+                </div>
+                <div class="col-xs-6">
+                  <input type="text" class="form-control" placeholder="checkout">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <select name="" id="trees" class="form-control">
+                <option value="1">1 tree</option>
+                <option value="2">2 trees</option>
+                <option value="3">3 trees</option>
+              </select>
+            </div>
+            <input type="submit" class="btn btn-success" value="Timber it" style="width: 100%">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="gray-wrapper border-top">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        <p><%= forest.summary %></p>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+      <ul class="list-inline">
+        <li><i class="fa fa-tree"></i><%= " " + forest.tree_type %></li>
+        <li><i class="fa fa-shopping-cart"></i><%= " " + forest.available_trees.to_s %></li>
+      </ul>
+      </div>
+    </div>
+  </div>
+</div>
+

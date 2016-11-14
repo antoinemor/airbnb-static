@@ -60,48 +60,23 @@ title: Woody Wood!
       </div>
     </div>
 
-
     <!-- Your cards code -->
+
     <div class="cards-wrapper">
       <h2 class="text-center">Your next chopping trip</h2><br>
       <div class="container">
         <div class="row">
-          <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/card-background.jpeg');">
-              <div class="card-category">Adventure</div>
-              <div class="card-avatar"><img class="avatar img-circle" src="http://fillmurray.com/g/200/200" alt="profile pic"></div>
-              <div class="card-title">ALASKA</div>
-              <div class="card-description">Finest wood in America!</div>
-              <a class="card-link" href="#"></a>
+          <% data.forests.each do |owner, forest| %>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path forest.picture %>');">
+                <div class="card-category"><%= forest.type.upcase %></div>
+                <div class="card-avatar"><%= image_tag forest.owner_picture, class:"avatar-med" %></div>
+                <div class="card-title"><%= forest.name %></div>
+                <div class="card-description"><%= forest.summary %></div>
+                <%= link_to "#", "forests/#{owner}.html", class: "card-link" %>
+              </div>
             </div>
-          </div>
-          <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/card-background2.jpeg');">
-              <div class="card-category">Chill</div>
-              <div class="card-avatar"><img class="avatar img-circle" src="http://www.placecage.com/g/200/200" alt="profile pic"></div>
-              <div class="card-title">NORWAY</div>
-              <div class="card-description">Premium European wood!</div>
-              <a class="card-link" href="#"></a>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/card-background3.jpeg');">
-              <div class="card-category">Discovery</div>
-              <div class="card-avatar"><img class="avatar img-circle" src="http://www.fillmurray.com/g/300/300" alt="profile pic"></div>
-              <div class="card-title">BRAZIL</div>
-              <div class="card-description">Madeira a vontade!</div>
-              <a class="card-link" href="#"></a>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/card-background4.jpeg');">
-              <div class="card-category">Pandas</div>
-              <div class="card-avatar"><img class="avatar img-circle" src="http://www.placecage.com/g/300/300" alt="profile pic"></div>
-              <div class="card-title">CHINA</div>
-              <div class="card-description">Want Hevea?</div>
-              <a class="card-link" href="#"></a>
-            </div>
-          </div>
+          <% end %>
         </div>
       </div>
     </div>

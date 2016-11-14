@@ -1,0 +1,44 @@
+antoine:
+  owner_name: Antoine Moreau
+  picture: card-background.jpeg
+  owner_picture: antoine.jpg
+  type: Adventure
+  summary: Finest wood in America
+  name: Alaska
+  saw: true
+  rating: 5
+  available_trees: 652
+  tree_type: Black Spruce
+bill:
+  owner_name: Bill Murray
+  picture: card-background2.jpeg
+  owner_picture: bill.jpg
+  type: Classy
+  summary: Premium European Wood
+  name: Norway
+  saw: true
+  rating: 5
+  available_trees: 120
+  tree_type: Birch Betula
+nicolas:
+  owner_name: Nicolas Cage
+  picture: card-background3.jpeg
+  owner_picture: nicolas.jpg
+  type: Premium
+  summary: Madeira a vontade
+  name: Brazil
+  saw: false
+  rating: 3
+  available_trees: 3
+  tree_type: Copaifera
+steven:
+  owner_name: Steven Segal
+  picture: card-background4.jpeg
+  owner_picture: steven.jpg
+  type: Brutal
+  summary: Want Hevea?
+  name: China
+  saw: true
+  rating: 4
+  available_trees: 1209
+  tree_type: hevea

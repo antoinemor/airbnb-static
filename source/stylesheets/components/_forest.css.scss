@@ -1,0 +1,30 @@
+.user_forest {
+  display: flex;
+  align-items: center;
+  height: 150px;
+}
+
+.user_info {
+  flex: 0 0 120px;
+  p {
+    font-size: 12px;
+  }
+  i {
+    margin-bottom: 10px;
+  }
+}
+
+.forest_info_short {
+  flex: 1 0 auto;
+  p {
+    font-size: 12px !important;
+    line-height: 5px;
+  }
+}
+
+.booking-form {
+  padding: 0 10px;
+  input, select {
+    font-size: 12px;
+  }
+}
